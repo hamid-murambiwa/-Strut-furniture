@@ -1,0 +1,173 @@
+---
+swagger: '2.0'
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/categories":
+    get:
+      summary: list all categories
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: add a category
+      tags:
+      - Categories
+      consumes:
+      - application/json
+      parameters:
+      - name: insert
+        in: body
+        schema:
+          type: object
+          properties:
+            insert:
+              type: object
+              properties:
+                title:
+                  type: string
+                image:
+                  type: string
+                route:
+                  type: string
+              required:
+              - title
+              - image
+              - route
+      responses:
+        '201':
+          description: successful
+  "/api/v1/categories/{category_id}":
+    parameters:
+    - name: category_id
+      in: path
+      type: string
+      description: id
+      required: true
+    get:
+      summary: list a category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: successful
+  "/api/v1/categories/{category_id}/furniture_items":
+    get:
+      summary: list furniture items
+      tags:
+      - FurnitureItems
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create furniture
+      tags:
+      - FurnitureItems
+      consumes:
+      - application/json
+      parameters:
+      - name: furniture_item
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            furniture_item:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: float
+                designer:
+                  type: string
+                material:
+                  type: string
+                made:
+                  type: string
+                category_id:
+                  type: string
+                a_image:
+                  type: string
+                b_image:
+                  type: string
+                c_image:
+                  type: string
+                d_image:
+                  type: string
+              required:
+              - name
+              - description
+              - price
+              - designer
+              - material
+              - made
+              - category_id
+              - a_image
+              - b_image
+              - c_image
+              - d_image
+      responses:
+        '201':
+          description: successful
+  "/api/v1/categories/{category_id}/furniture_items/{furniture_item_id}/reviews":
+    get:
+      summary: Retrieves all reviews made for an furniture item
+      tags:
+      - Reviews
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: category_id
+        in: path
+        type: string
+        required: true
+      - name: furniture_item_id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: reviews found
+    post:
+      summary: add a review
+      tags:
+      - Reviews
+      consumes:
+      - application/json
+      parameters:
+      - name: insert
+        in: body
+        schema:
+          type: object
+          properties:
+            insert:
+              type: object
+              properties:
+                overal_rating:
+                  type: float
+                title:
+                  type: string
+                description:
+                  type: string
+                furniture_item_id:
+                  type: integer
+              required:
+              - overal_rating
+              - title
+              - description
+              - furniture_item_id
+      responses:
+        '201':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
