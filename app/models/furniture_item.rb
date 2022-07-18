@@ -8,8 +8,8 @@ class FurnitureItem < ApplicationRecord
   validates :designer, presence: true
   validates :material, presence: true
   validates :made, presence: true
-  validates :a_image presence: true
+  validates :a_image, presence: true
   validates :b_image, presence: true
-  validates :c_image presence: true
+  validates :c_image, presence: true
   validates :d_image, presence: true
 end
