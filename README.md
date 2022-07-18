@@ -8,7 +8,7 @@ An api with end points to index/show/create/delete Categories, Furniture items a
 
 # Live link for API
 
- [Click Me!]()
+ [Click Me!](https://strut-furniture-api.herokuapp.com/api-docs)
 ## Built With
 
 - Ruby version 3.1.0
@@ -83,7 +83,7 @@ You can view a specific Furniture Item by calling this endpoint:
 /api/v1/categories/:category_id/furniture_items/:id
 
 **If you need further information about the endpoints you can view the documentation navigating to `/api-docs`.
-Or you can just click this [link]()**
+Or you can just click this [link](https://strut-furniture-api.herokuapp.com/api-docs)**
 
 If you prefer to clone the project locally, you can also get to the docs by navigating to http://`domain`:`port`/api-docs. Where `domain` is the domain of your server and `port` is the port of your server.
 For example, if your server is running on port 3000, you can navigate to http://localhost:3000/api-docs.
