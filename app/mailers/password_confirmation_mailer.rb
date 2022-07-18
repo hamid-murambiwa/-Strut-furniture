@@ -5,7 +5,7 @@ class PasswordConfirmationMailer < ApplicationMailer
 
   def reset_confirmation
     @user = params[:user]
-    @url  = 'http://localhost:3001/login'
+    @url  = 'https://strutfurniture.netlify.app//login'
     mail(to: @user.email, subject: 'Confirmation of a successful password reset from STRUT')
   end
 end

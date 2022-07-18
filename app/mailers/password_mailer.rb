@@ -5,7 +5,7 @@ class PasswordMailer < ApplicationMailer
 
   def reset_email
     @user = params[:user]
-    @url  = "http://localhost:3001/reset?token=#{@user.reset_password_token}"
+    @url  = "https://strutfurniture.netlify.app/reset?token=#{@user.reset_password_token}"
     mail(to: @user.email, subject: 'Reset your password from STRUT')
   end
 end
