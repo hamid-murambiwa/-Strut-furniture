@@ -10,6 +10,8 @@ gem 'rails', '~> 7.0.3'
 
 gem 'rack-cors'
 
+gem 'bcrypt'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -33,9 +35,8 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-
-  gem 'rswag-api'
-  gem 'rswag-ui'
+gem 'rswag-api'
+gem 'rswag-ui'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
