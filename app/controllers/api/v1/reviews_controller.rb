@@ -33,7 +33,7 @@ module Api
       private
 
       def review_params
-        params.require(:review).permit(:overal_rating, :title, :description, :furniture_item_id)
+        params.require(:review).permit(:overal_rating, :title, :username, :description, :furniture_item_id)
       end
     end
   end

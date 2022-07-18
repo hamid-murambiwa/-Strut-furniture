@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[7.0] # rubocop:todo Style/Document
     create_table :reviews do |t|
       t.float :overal_rating
       t.string :title
+      t.string :username
       t.string :description
 
       t.timestamps
