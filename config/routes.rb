@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       put 'users/:id/update_email', to: 'users#update_email', as: 'update_email'
       put 'users/:id/update_password', to: 'users#update_password', as: 'update_password'
       resources :users, only: %i[create show index edit] do
-        resources :items, only: %i[create show index destroy]
+        resources :orders, only: %i[create show index destroy]
       end
       resources :categories, only: %i[index show] do
         resources :furniture_items, only: %i[index show] do

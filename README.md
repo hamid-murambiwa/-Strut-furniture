@@ -13,6 +13,7 @@ An api with end points to index/show/create/delete Categories, Furniture items a
 
 - Ruby version 3.1.0
 - RoR version 7.0.3
+- Bcrypt gem
 ## Getting Started
 
 The API will receive POST requests to create Reviews and GET requests to view Categories and Furniture Items.

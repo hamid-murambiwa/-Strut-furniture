@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_17_100348) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_01_184735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,6 +37,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_17_100348) do
     t.datetime "updated_at", null: false
     t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_furniture_items_on_category_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "link"
+    t.float "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -71,5 +80,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_17_100348) do
   end
 
   add_foreign_key "furniture_items", "categories"
+  add_foreign_key "orders", "users"
   add_foreign_key "reviews", "furniture_items"
 end
