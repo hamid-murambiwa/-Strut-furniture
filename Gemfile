@@ -12,6 +12,10 @@ gem 'rack-cors'
 
 gem 'bcrypt'
 
+gem 'ed25519', '>= 1.2', '< 2.0'
+
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
