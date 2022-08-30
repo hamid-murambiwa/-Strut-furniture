@@ -3,7 +3,7 @@ lock "~> 3.17.1"
 require 'capistrano-db-tasks'
 
 #FIXME add your app name here
-set :application, 'strut-api'
+set :application, 'Strut-furniture-API'
 #FIXME replace 'git@github.com:YOUR-GIT-REPO-HERE' with your git clone url
 set :repo_url, 'https://github.com/hamid-murambiwa/Strut-furniture-API.git'
 #FIXME add location on the server here
