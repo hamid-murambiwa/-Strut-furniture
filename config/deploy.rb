@@ -5,12 +5,12 @@ require 'capistrano-db-tasks'
 #FIXME add your app name here
 set :application, 'Strut-furniture-API'
 #FIXME replace 'git@github.com:YOUR-GIT-REPO-HERE' with your git clone url
-set :repo_url, 'https://github.com/hamid-murambiwa/Strut-furniture-API.git'
+set :repo_url, 'git@github.com:hamid-murambiwa/Strut-furniture-API.git'
 #FIXME add location on the server here
-set :deploy_to, '/home/deploy/strut-api'
+set :deploy_to, '/home/deploy/Strut-furniture-API'
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 
-set :linked_files, %w{config/database.yml config/master.key}
+set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 set :keep_releases, 3

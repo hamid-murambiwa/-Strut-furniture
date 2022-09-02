@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
 
@@ -65,6 +65,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.5', require: false
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-db-tasks', require: false
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
