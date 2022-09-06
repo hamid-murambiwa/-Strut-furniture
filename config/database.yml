@@ -82,9 +82,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: strut_furniture_production
-  username: deploy
-  password: 123456789
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: strut_furniture
+  password: <%= ENV["STRUT_FURNITURE_DATABASE_PASSWORD"] %>
