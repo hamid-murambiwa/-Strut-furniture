@@ -16,6 +16,7 @@ An api with end points to index/show/create/delete Categories, Furniture items a
 - Bcrypt gem
 ## Getting Started
 
+
 The API will receive POST requests to create Reviews and GET requests to view Categories and Furniture Items.
 The base URL is: 
 
@@ -30,7 +31,6 @@ If you want to view Furniture Items call this endpoint:
 To do the same but with Reviews call this endpoint:
 
 /api/v1/categories/:category_id/furniture_items/:furniture_item_id/reviews
-
 
 Both endpoints will return a JSON response with the following format:
 
