@@ -84,8 +84,8 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: strut_furniture_production
-  username: recipe_app
-  password: 123456789
-  host: 127.0.0.1
-  port: 5432
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
