@@ -87,5 +87,5 @@ production:
   database: strut_furniture_production
   username: recipe_app
   password: 123456789
-  host: localhost
+  host: 127.0.0.1
   port: 5432
