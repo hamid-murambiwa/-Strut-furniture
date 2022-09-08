@@ -92,7 +92,7 @@ production:
   database: strut_furniture_production
   username: recipe_app
   password: 123456789
-  port: <%= ENV['RDS_PORT'] %>
+  port: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: 127.0.0.1
 
   # The TCP port the server listens on. Defaults to 5432.
