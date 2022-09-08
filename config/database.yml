@@ -87,9 +87,9 @@ production:
   database: <%= ENV['RDS_DB_NAME'] %>
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>
-  host: 127.0.0.1
+  host: <%= ENV['RDS_HOST'] %>
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  port: 5432
+  port: <%= ENV['RDS_PORT'] %>
   
