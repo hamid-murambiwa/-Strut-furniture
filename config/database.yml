@@ -88,7 +88,7 @@ test:
 #
 production:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: strut_furniture_production
   username: recipe_app
   password: 123456789
